@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | IP Address Tracker</title>
+  <!-- Leaflet Map -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+
+  <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+ integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+ crossorigin=""></script>
+
+ <!-- Google Fonts -->
+ <link rel="preconnect" href="https://fonts.gstatic.com">
+ <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+   
+  <!-- Main Style File -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  
+</head>
+<body>  
+  <header>
+    <div class="container">
+      <h1>IP Address Tracker</h1>
+      <div class="search">
+        <input type="text" name="ip-address" class="ip-address" placeholder="Search for any IP address or domain">
+        <div class="search-button">
+          <img src="images/icon-arrow.svg" alt="">
+        </div>
+      </div>
+      <div class="info">
+        <div class="info-item">
+          <span class="label">IP Address</span>
+          <h2 class="ip">234</h2>
+        </div>
+        <div class="info-item">
+          <span class="label">Location</span>
+          <h2 class="location">234</h2>
+        </div>
+        <div class="info-item">
+          <span class="label">Timezone</span>
+          <h2 class="timezone">UTC</h2>
+        </div>
+        <div class="info-item">
+          <span class="label">ISP</span>
+          <h2 class="isp">234</h2>
+        </div>
+      </div>
+    </div>
+    
+  </header>
+  <div id="mapid"></div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Raad Abu Hosieni</a>.
+  </div>
+  <!-- Make sure you put this AFTER Leaflet's CSS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

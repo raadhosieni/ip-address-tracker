@@ -1,0 +1,192 @@
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* Start Variables */
+:root {
+  --very-dark-gray: hsl(0, 0%, 17%);
+  --dark-gray: hsl(0, 0%, 59%);
+  --medium-dark-gray: hsl(0, 1%, 34%);
+}
+/* End Variables */
+
+/* Start Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+}
+
+.container {
+  width: 320px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+/* End Global */
+
+/* Start Header */
+header {
+  background-image: url("images/pattern-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 280px;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, white, #000);
+  opacity: 0.2;
+}
+
+header .container {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 999;
+}
+header .container h1 {
+  color: #fff;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 1.7rem;
+}
+
+header .container .search {
+  display: flex;
+  width: 320px;
+  height: 50px;
+  margin-bottom: 30px;
+}
+
+header .container .search input[type="text"] {
+  flex: 1;
+  border: none;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  padding: 10px 20px;
+  font-size: 1.2rem;
+}
+
+header .container .search input[type="text"]:focus {
+  outline: none;
+}
+
+header .container .search .search-button {
+  width: 50px;
+  background-color: #000;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  position: relative;
+}
+
+header .container .search .search-button:hover {
+  background-color: var(--very-dark-gray);
+}
+
+header .container .search .search-button img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+header .container .info {
+  background-color: #fff;
+  width: 100%;
+  padding: 20px 25px;
+  border-radius: 15px;
+}
+
+header .container .info .info-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+header .container .info .info-item .label {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--dark-gray);
+  margin-bottom: 5px;
+  display: block;
+}
+
+header .container .info .info-item h2 {
+  font-size: 1.2rem;
+  color: var(--very-dark-gray);
+  font-weight: 500;
+}
+/* End Header */
+
+/* Start Map */
+#mapid {
+  height: calc(100% - 300px);
+  width: 100%;
+}
+
+a.leaflet-control-zoom-in,
+a.leaflet-control-zoom-out {
+  display: none;
+}
+/* End Map */
+
+/* Start Desktop */
+@media (min-width: 768px) {
+  header {
+    height: 200px;
+  }
+
+  header .container .info {
+    display: flex;
+    text-align: left;
+  }
+
+  header .container .info .info-item {
+    flex: 1;
+  }
+
+  #mapid {
+    height: calc(100% - 220px);
+  }
+}
+
+/* End Desktop */
